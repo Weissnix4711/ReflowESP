@@ -3,6 +3,7 @@
 *.bak
 *.bck
 *.kicad_pcb-bak
+*.kicad_sch-bak
 *.sch-bak
 *-bak
 *~
@@ -12,3 +13,4 @@ _autosave-*
 *-save.kicad_pcb
 fp-info-cache
 *-backups
+*.kicad_prl
