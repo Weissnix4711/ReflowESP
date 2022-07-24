@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/libraries/Espressif.pretty")(options "")(descr ""))
   (lib (name "TerminalBlock_KF301")(type "KiCad")(uri "${KIPRJMOD}/libraries/TerminalBlock_KF301")(options "")(descr ""))
+  (lib (name "Package_SOIC-8")(type "KiCad")(uri "${KIPRJMOD}/libraries/Package_SOIC-8.pretty")(options "")(descr ""))
 )
