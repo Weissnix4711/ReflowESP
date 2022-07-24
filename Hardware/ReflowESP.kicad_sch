@@ -6,8 +6,8 @@
 
   (title_block
     (title "ReflowESP")
-    (date "2022-07-14")
-    (rev "v0.0.5")
+    (date "2022-07-24")
+    (rev "v0.0.6")
     (company "Thomas Aldrian")
   )
 
