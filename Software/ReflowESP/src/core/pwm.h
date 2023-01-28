@@ -5,7 +5,7 @@ namespace pwm {
 
 class PWMOutput {
  public:
-  void set_pin(uint8_t pin) { pin_ = pin; };
+  void set_pin(uint8_t pin) { pin_ = pin; }
   void set_period(uint32_t period) { period_ = period; }
   void set_level(float state) { state_ = state; }
   void poll() { loop(); }

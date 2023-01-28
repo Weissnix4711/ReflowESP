@@ -1,8 +1,8 @@
 /**
  * Adapted from Marlin FW Project, copyright notice below.
- * 
- * 
- * 
+ *
+ *
+ *
  * Marlin 3D Printer Firmware
  * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
@@ -83,11 +83,11 @@
 #define _ENA_1(O)           _ISENA(CAT(_IS,CAT(ENA_, O)))
 #define _DIS_1(O)           NOT(_ENA_1(O))
 #define ENABLED(V...)       DO(ENA,&&,V)
-#define DISABLED(V...)      DO(DIS,&&,V)
+#define NENABLED(V...)      DO(DIS,&&,V)
 #define COUNT_ENABLED(V...) DO(ENA,+,V)
 
-#define ANY(V...)          !DISABLED(V)
-#define NONE(V...)          DISABLED(V)
+#define ANY(V...)          !NENABLED(V)
+#define NONE(V...)          NENABLED(V)
 #define ALL(V...)           ENABLED(V)
 #define BOTH(V1,V2)         ALL(V1,V2)
 #define EITHER(V1,V2)       ANY(V1,V2)
