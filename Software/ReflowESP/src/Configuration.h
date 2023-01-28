@@ -21,6 +21,8 @@
 #define THERM_CS0 15
 #define THERM_CS1 32
 
+#define THERM_POLL_PERIOD 500
+
 // Default PID values
 #define PID_KP 0
 #define PID_KI 0

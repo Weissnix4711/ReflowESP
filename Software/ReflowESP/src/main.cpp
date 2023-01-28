@@ -19,6 +19,7 @@
 #include <ArduinoJson.h>
 
 #include "core/pwm.h"
+#include "core/therm.h"
 
 const char* ssid = "SSID";
 const char* password = "PASSWORD";
@@ -40,6 +41,7 @@ hw_timer_t *timer = NULL;
 portMUX_TYPE timerMux = portMUX_INITIALIZER_UNLOCKED;
 
 pwm::PWMOutput pwmout;
+therm::Thermocouple thermocouple;
 
 /* -------------------------------------------------------------------------- */
 /*                                    SETUP                                   */
@@ -80,6 +82,11 @@ void initPWM() {
   pwmout.set_period(PWM_PERIOD);
 }
 
+void initTherm() {
+  thermocouple.set_pins(THERM_MISO, THERM_SCK, THERM_CS0);
+  thermocouple.set_period(THERM_POLL_PERIOD);
+}
+
 void setup() {
   Serial.begin(115200);
   Serial.println("Serial Start");
@@ -116,6 +123,7 @@ void setup() {
 
   initPins();
   initPWM();
+  initTherm();
 
   delay(500);
 }
